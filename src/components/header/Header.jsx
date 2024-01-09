@@ -11,6 +11,7 @@ import Logo from "../UI/logo/Logo";
 export default function Header(params) {
   return (
     <header className="header">
+      <div className="search-box">seacrch box</div>
       {/* <motion.section
         className="header-background"
         style={{ backgroundImage: `url(${header_background})` }}
@@ -31,7 +32,6 @@ export default function Header(params) {
           <h3 className="brand">depuis 1789</h3>
         </motion.section>
       </section>
-
       <Nav />
     </header>
   );
