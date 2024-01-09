@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+
+/* dancing script */
+
+@import url("https://fonts.googleapis.com/css2?family=Sacramento&display=swap");
+
+/* sacramento */
+
+@import url("https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon+SC&display=swap");
+
+/* im fell french canon sc */
+
+.app {
+  display: grid;
+  place-items: center;
+  place-content: center;
+  grid-template-rows: 3fr 8fr 2fr;
+  min-height: 100vh;
+  background: linear-gradient(140deg, #444, #111);
+  color: #ddd;
+}
+
+.header {
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  object-fit: cover;
+  object-position: bottom;
+  background-size: cover;
+  z-index: 1;
+  /* make the image to cover just the header space */
+  background-image: url("./assets/img/the-storming-of-the-bastille-15733.jpg");
+  background-repeat: no-repeat;
+  animation: imageUpNDown 20s ease-in-out infinite alternate;
+  background-size: cover;
+  backface-visibility: hidden;
+  transform: translateZ(1px) scale(1.1);
+}
+
+@keyframes imageUpNDown {
+  0% {
+    background-position-y: bottom;
+    background-position-x: left;
+  }
+  100% {
+    background-position-y: top;
+    background-position-x: right;
+  }
+}
+
+.header-mid {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.brand-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "IM Fell French Canon SC", serif;
+  line-height: 5px;
+}
+
+.brand {
+  padding: 0.5rem;
+  background: linear-gradient(
+    140deg,
+    rgb(8, 73, 236),
+    rgb(243, 237, 237),
+    rgb(239, 10, 10)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.logo {
+  left: -10rem;
+  top: -3rem;
+  display: block;
+  position: relative;
+}
+
+.logo img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.nav {
+  width: 100%;
+}
+
+.nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
